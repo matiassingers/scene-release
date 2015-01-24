@@ -4,6 +4,26 @@ var assert = require('assert');
 var sceneRelease = require('./');
 
 describe('sceneRelease', function(){
+  it('should parse Citizenfour example correctly', function() {
+    var result = sceneRelease('Citizenfour.2014.720p.WEB-DL.AAC2.0.H.264-NOGRP');
+
+    assert.equal(result.title, 'Citizenfour');
+    assert.equal(result.original, 'Citizenfour.2014.720p.WEB-DL.AAC2.0.H.264-NOGRP');
+    assert.equal(result.year, '2014');
+    assert.equal(result.group, 'NOGRP');
+
+    assert.equal(result.resolution, '720p');
+    assert.equal(result.type, 'WEB-DL');
+
+    assert.equal(result.video, 'H.264');
+    assert.equal(result.audio, 'AAC2.0');
+
+    assert.equal(result.language, '');
+    assert.equal(result.tags, null);
+    assert.equal(result.edition, '');
+    assert.equal(result.release, '');
+  });
+
   it('should parse The Raid 2 example correctly', function() {
     var result = sceneRelease('The.Raid.2.2014.BluRay.720p.DTS.x264-CHD');
 

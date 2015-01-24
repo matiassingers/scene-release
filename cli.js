@@ -11,7 +11,7 @@ function help() {
       '  ' + pkg.description,
     '',
     '  Example',
-    '    scene-release The.Raid.2.2014.BluRay.720p.DTS.x264-CHD',
+    '    scene-release Citizenfour.2014.720p.WEB-DL.AAC2.0.H.264-NOGRP',
     '',
     '    => { "year": "2014",',
     '         "resolution": "720p",',
