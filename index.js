@@ -1,5 +1,35 @@
 'use strict';
 
-module.exports = function(){
+var match = require('string-match');
 
+module.exports = function(name){
+  // TODO: split out RegExps for each type(x264, TV, MP3, Games, etc.)
+  var data = {
+    year: match(name, /[1,2]\d{3}/),
+    resolution: match(name, /\d{3,4}p/i),
+    type: match(name, /CAM|TS|TELESYNC|(DVD|BD)SCR|SCR|DDC|R5\.LINE|R5|DVDR|(HD|PD)TV|WEB-DL|WEBDL|BluRay|(DVD|HD|BR|BD)Rip/i),
+    video: match(name, /[xh]\.?264/i),
+    audio: match(name, /AAC2\.0|AAC|AC3|DTS|DD5\.1/i),
+    language: match(name, /MULTiSUBS|MULTi|NORDiC|DANiSH|SWEDiSH|NORWEGiAN|GERMAN|iTALiAN|FRENCH|SPANiSH/i),
+    edition: match(name, /UNRATED|DC|EXTENDED|EXTENDED\.EDITION|3D|2D/i),
+    tags: name.match(/COMPLETE|LiMiTED|iNTERNAL/i),
+    release: match(name, /PROPER|REPACK|READNFO|READ\.NFO|DiRFiX|NFOFiX/i),
+    group: match(name, /-[A-Za-z0-9]+/).replace('-', '')
+  };
+
+  var matches = '';
+  for(var key in data){
+    var value = data[key];
+    if(!value) continue;
+
+    matches += value + '|';
+  }
+
+  data.title = name
+    .replace(RegExp(matches + '-', 'g'), '')
+    .replace(/\./g, ' ')
+    .trim();
+  data.original = name;
+
+  return data;
 };
