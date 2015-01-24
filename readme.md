@@ -13,8 +13,10 @@ $ npm install --save scene-release
 ```js
 var sceneRelease = require('scene-release');
 
-sceneRelease()
-
+sceneRelease(The.Raid.2.2014.BluRay.720p.DTS.x264-CHD)
+// => { "year": "2014",
+//      "resolution": "720p",
+//      ... }
 ```
 
 
@@ -27,9 +29,14 @@ $ npm install --global scene-release
 ```sh
 $ scene-release --help
 
+  parse scene release names
+
   Example
-    scene-release
-    
+    scene-release The.Raid.2.2014.BluRay.720p.DTS.x264-CHD
+
+    => { "year": "2014",
+         "resolution": "720p",
+         ... }
 ```
 
 
