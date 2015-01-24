@@ -1,6 +1,6 @@
 {
   "name": "scene-release",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "parse scene release names",
   "main": "index.js",
   "scripts": {
