@@ -48,6 +48,12 @@ $ scene-release --help
 ```
 
 
+## Similar projects
+- [peterhellberg/release](https://github.com/peterhellberg/release) (Go)
+- [danielhusar/movie-title](https://github.com/danielhusar/movie-title) (JavaScript)
+- [majestixx/scene-release-parser-php-lib](https://github.com/majestixx/scene-release-parser-php-lib) (PHP)
+
+
 ## License
 
 MIT © [Matias Singers](http://mts.io)
