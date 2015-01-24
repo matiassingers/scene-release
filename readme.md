@@ -4,7 +4,10 @@
 Examples and conventions based on:
 - Good collection of scene rulesets: http://scenerules.irc.gs/
 - Very brief Wikipedia description of scene naming schemes: http://en.wikipedia.org/wiki/Standard_(warez)#Naming
-- Examples from any decent predb: http://rescene.wikidot.com/scene-databases
+- Examples from any decent predb:
+  - http://orlydb.com/
+  - http://predb.me/
+  - http://rescene.wikidot.com/scene-databases
 
 ## Install
 
