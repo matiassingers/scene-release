@@ -1,0 +1,33 @@
+{
+  "name": "scene-release",
+  "version": "0.1.0",
+  "description": "parse scene release names",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "bin": {
+    "scene-release": "cli.js"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matiassingers/scene-release"
+  },
+  "author": "Matias Singers <mail@matiassingers.com> (http://mts.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matiassingers/scene-release/issues"
+  },
+  "homepage": "https://github.com/matiassingers/scene-release",
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "2.1.0"
+  }
+}
