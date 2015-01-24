@@ -123,4 +123,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, '');
     assert.equal(result.release, 'DiRFiX');
   });
+
+  it('should parse title with a year in the beginning, like 2001: A Space Odyssey', function() {
+    var result = sceneRelease('2001.A.Space.Odyssey.1968.iNTERNAL.1080p.BluRay.x264-MANNEKEPiS');
+
+    assert.equal(result.title, '2001 A Space Odyssey');
+    assert.equal(result.original, '2001.A.Space.Odyssey.1968.iNTERNAL.1080p.BluRay.x264-MANNEKEPiS');
+    assert.equal(result.year, '1968');
+    assert.equal(result.group, 'MANNEKEPiS');
+
+    assert.equal(result.resolution, '1080p');
+    assert.equal(result.type, 'BluRay');
+
+    assert.equal(result.video, 'x264');
+    assert.equal(result.audio, '');
+
+    assert.equal(result.language, '');
+    assert.equal(result.tags[0], 'iNTERNAL');
+    assert.equal(result.edition, '');
+    assert.equal(result.release, '');
+  });
 });
