@@ -14,7 +14,7 @@ module.exports = function(name){
     edition: match(name, /UNRATED|DC|(Directors|EXTENDED)\.(CUT|EDITION)|EXTENDED|3D|2D/i),
     tags: name.match(/COMPLETE|LiMiTED|iNTERNAL/i),
     release: match(name, /PROPER|REPACK|READNFO|READ\.NFO|DiRFiX|NFOFiX/i),
-    group: match(name, /-[A-Za-z0-9]+/).replace('-', '')
+    group: match(name, /-[A-Za-z0-9]+$/).replace('-', '')
   };
 
   var matches = '';
