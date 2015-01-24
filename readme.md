@@ -2,12 +2,11 @@
 > parse scene release names
 
 Examples and conventions based on:
-- Good collection of scene rulesets: http://scenerules.irc.gs/
+- Collection of scene rulesets: http://scenerules.irc.gs/
 - Very brief Wikipedia description of scene naming schemes: http://en.wikipedia.org/wiki/Standard_(warez)#Naming
-- Examples from any decent predb:
-  - http://orlydb.com/
-  - http://predb.me/
-  - http://rescene.wikidot.com/scene-databases
+- Release examples from any predb:
+  - [orlydb](http://orlydb.com/)
+  - [PreDB.me](http://predb.me/)
 
 ## Install
 
