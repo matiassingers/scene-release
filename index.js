@@ -31,5 +31,11 @@ module.exports = function(name){
     .trim();
   data.original = name;
 
+  Object.keys(data).forEach(function(key) {
+    if(!data[key]){
+      delete data[key];
+    }
+  });
+
   return data;
 };
