@@ -18,10 +18,10 @@ describe('sceneRelease', function(){
     assert.equal(result.video, 'H.264');
     assert.equal(result.audio, 'AAC2.0');
 
-    assert.equal(result.language, '');
+    assert.equal(result.language, void 0);
     assert.equal(result.tags, null);
-    assert.equal(result.edition, '');
-    assert.equal(result.release, '');
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, void 0);
   });
 
   it('should parse The Raid 2 example correctly', function() {
@@ -38,10 +38,10 @@ describe('sceneRelease', function(){
     assert.equal(result.video, 'x264');
     assert.equal(result.audio, 'DTS');
 
-    assert.equal(result.language, '');
+    assert.equal(result.language, void 0);
     assert.equal(result.tags, null);
-    assert.equal(result.edition, '');
-    assert.equal(result.release, '');
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, void 0);
   });
 
   it('should parse Gravity example correctly', function() {
@@ -56,12 +56,12 @@ describe('sceneRelease', function(){
     assert.equal(result.type, 'BluRay');
 
     assert.equal(result.video, 'x264');
-    assert.equal(result.audio, '');
+    assert.equal(result.audio, void 0);
 
-    assert.equal(result.language, '');
+    assert.equal(result.language, void 0);
     assert.equal(result.tags, null);
-    assert.equal(result.edition, '');
-    assert.equal(result.release, '');
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, void 0);
   });
 
   it('should parse The Lego Movie example correctly', function() {
@@ -72,16 +72,16 @@ describe('sceneRelease', function(){
     assert.equal(result.year, '2014');
     assert.equal(result.group, 'BAKED');
 
-    assert.equal(result.resolution, '');
+    assert.equal(result.resolution, void 0);
     assert.equal(result.type, 'BLURAY');
 
-    assert.equal(result.video, '');
-    assert.equal(result.audio, '');
+    assert.equal(result.video, void 0);
+    assert.equal(result.audio, void 0);
 
-    assert.equal(result.language, '');
+    assert.equal(result.language, void 0);
     assert.equal(result.tags[0], 'COMPLETE');
     assert.equal(result.edition, '3D');
-    assert.equal(result.release, '');
+    assert.equal(result.release, void 0);
   });
 
   it('should parse Thor: The Dark World example correctly', function() {
@@ -92,16 +92,16 @@ describe('sceneRelease', function(){
     assert.equal(result.year, '2013');
     assert.equal(result.group, 'iND');
 
-    assert.equal(result.resolution, '');
+    assert.equal(result.resolution, void 0);
     assert.equal(result.type, 'BLURAY');
 
-    assert.equal(result.video, '');
-    assert.equal(result.audio, '');
+    assert.equal(result.video, void 0);
+    assert.equal(result.audio, void 0);
 
     assert.equal(result.language, 'MULTi');
     assert.equal(result.tags[0], 'COMPLETE');
     assert.equal(result.edition, '3D');
-    assert.equal(result.release, '');
+    assert.equal(result.release, void 0);
   });
 
   it('should parse Veronica Mars french language example correctly', function() {
@@ -116,12 +116,12 @@ describe('sceneRelease', function(){
     assert.equal(result.type, 'BluRay');
 
     assert.equal(result.video, 'x264');
-    assert.equal(result.audio, '');
+    assert.equal(result.audio, void 0);
 
     assert.equal(result.language, 'FRENCH');
     assert.equal(result.tags[0], 'LIMITED');
-    assert.equal(result.edition, '');
-    assert.equal(result.release, '');
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, void 0);
   });
 
   it('should parse long title with The 100-Year-Old Man example correctly', function() {
@@ -136,11 +136,11 @@ describe('sceneRelease', function(){
     assert.equal(result.type, 'BluRay');
 
     assert.equal(result.video, 'x264');
-    assert.equal(result.audio, '');
+    assert.equal(result.audio, void 0);
 
     assert.equal(result.language, 'SWEDiSH');
     assert.equal(result.tags, null);
-    assert.equal(result.edition, '');
+    assert.equal(result.edition, void 0);
     assert.equal(result.release, 'DiRFiX');
   });
 
@@ -156,11 +156,11 @@ describe('sceneRelease', function(){
     assert.equal(result.type, 'BluRay');
 
     assert.equal(result.video, 'x264');
-    assert.equal(result.audio, '');
+    assert.equal(result.audio, void 0);
 
-    assert.equal(result.language, '');
+    assert.equal(result.language, void 0);
     assert.equal(result.tags[0], 'iNTERNAL');
-    assert.equal(result.edition, '');
-    assert.equal(result.release, '');
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, void 0);
   });
 });
