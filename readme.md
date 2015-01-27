@@ -20,7 +20,7 @@ $ npm install --save scene-release
 ```js
 var sceneRelease = require('scene-release');
 
-sceneRelease(Citizenfour.2014.720p.WEB-DL.AAC2.0.H.264-NOGRP)
+sceneRelease('Citizenfour.2014.720p.WEB-DL.AAC2.0.H.264-NOGRP')
 // => { "year": "2014",
 //      "resolution": "720p",
 //      ... }
