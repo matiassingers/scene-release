@@ -163,4 +163,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, void 0);
     assert.equal(result.release, void 0);
   });
+
+  it('should parse Greys Anatomy S11E12 720p WEB-DL DD5 1 H 264-NTb', function() {
+      var result = sceneRelease('Greys Anatomy S11E12 720p WEB-DL DD5 1 H 264-NTb');
+
+      assert.equal(result.title, 'Greys Anatomy S11E12');
+      assert.equal(result.original, 'Greys Anatomy S11E12 720p WEB-DL DD5 1 H 264-NTb');
+      assert.equal(result.year, void 0);
+      assert.equal(result.group, 'NTb');
+
+      assert.equal(result.resolution, '720p');
+      assert.equal(result.type, 'WEB-DL');
+
+      assert.equal(result.video, 'H 264');
+      assert.equal(result.audio, 'DD5 1');
+
+      assert.equal(result.language, void 0);
+      assert.equal(result.tags, null);
+      assert.equal(result.edition, void 0);
+      assert.equal(result.release, void 0);
+    });
 });
