@@ -184,5 +184,23 @@ describe('sceneRelease', function(){
     assert.equal(result.release, void 0);
   });
 
+  it('should parse House of Cards TV episode example with NF tag correctly', function() {
+    var result = sceneRelease('House.of.Cards.2013.S03E01.720p.NF.WEBRip.DD5.1.x264-NTb');
 
+    assert.equal(result.title, 'House of Cards S03E01');
+    assert.equal(result.original, 'House.of.Cards.2013.S03E01.720p.NF.WEBRip.DD5.1.x264-NTb');
+    assert.equal(result.year, "2013");
+    assert.equal(result.group, 'NTb');
+
+    assert.equal(result.resolution, '720p');
+    assert.equal(result.type, 'WEBRip');
+
+    assert.equal(result.video, 'x264');
+    assert.equal(result.audio, 'DD5.1');
+
+    assert.equal(result.language, void 0);
+    assert.equal(result.tags, null);
+    assert.equal(result.edition, 'NF');
+    assert.equal(result.release, void 0);
+  });
 });
