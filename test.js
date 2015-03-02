@@ -203,4 +203,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, 'NF');
     assert.equal(result.release, void 0);
   });
+
+  it('should parse What If movie example with EXTENDED CUT tag', function() {
+    var result = sceneRelease('What.If.2013.Extended.Cut.DVDRip.x264-EXViD');
+
+    assert.equal(result.title, 'What If');
+    assert.equal(result.original, 'What.If.2013.Extended.Cut.DVDRip.x264-EXViD');
+    assert.equal(result.year, "2013");
+    assert.equal(result.group, 'EXViD');
+
+    assert.equal(result.resolution, void 0);
+    assert.equal(result.type, 'DVDRip');
+
+    assert.equal(result.video, 'x264');
+    assert.equal(result.audio, void 0);
+
+    assert.equal(result.language, void 0);
+    assert.equal(result.tags, null);
+    assert.equal(result.edition, 'Extended Cut');
+    assert.equal(result.release, void 0);
+  });
 });
