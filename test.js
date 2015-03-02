@@ -223,4 +223,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, 'Extended Cut');
     assert.equal(result.release, void 0);
   });
+
+  it('should parse example with READ.NFO tag', function() {
+    var result = sceneRelease('The.Hobbit.The.Battle.Of.The.Five.Armies.2014.READ.NFO.NTSC.DVDR-KART3LDVD');
+
+    assert.equal(result.title, 'The Hobbit The Battle Of The Five Armies');
+    assert.equal(result.original, 'The.Hobbit.The.Battle.Of.The.Five.Armies.2014.READ.NFO.NTSC.DVDR-KART3LDVD');
+    assert.equal(result.year, "2014");
+    assert.equal(result.group, 'KART3LDVD');
+
+    assert.equal(result.resolution, void 0);
+    assert.equal(result.type, 'DVDR');
+
+    assert.equal(result.video, 'NTSC');
+    assert.equal(result.audio, void 0);
+
+    assert.equal(result.language, void 0);
+    assert.equal(result.tags, null);
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, 'READ NFO');
+  });
 });
