@@ -11,7 +11,7 @@ module.exports = function(name){
     video: match(name, /[xh][\.\s]?264/i),
     audio: match(name, /AAC2[\.\s]0|AAC|AC3|DTS|DD5[\.\s]1/i),
     language: match(name, /MULTiSUBS|MULTi|NORDiC|DANiSH|SWEDiSH|NORWEGiAN|GERMAN|iTALiAN|FRENCH|SPANiSH/i),
-    edition: match(name, /UNRATED|DC|(Directors|EXTENDED)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|[\.\s]NF/i),
+    edition: match(name, /UNRATED|DC|(Directors|EXTENDED)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b/i),
     tags: name.match(/COMPLETE|LiMiTED|iNTERNAL/i),
     release: match(name, /PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX/i),
     group: match(name, /[A-Za-z0-9]+$/)
