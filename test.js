@@ -164,7 +164,7 @@ describe('sceneRelease', function(){
     assert.equal(result.release, void 0);
   });
 
-  it('should parse Greys Anatomy S11E12 720p WEB-DL DD5 1 H 264-NTb', function() {
+  it('should parse Greys Anatomy TV episode example with whitespace correctly', function() {
     var result = sceneRelease('Greys Anatomy S11E12 720p WEB-DL DD5 1 H 264-NTb');
 
     assert.equal(result.title, 'Greys Anatomy S11E12');
