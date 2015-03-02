@@ -38,8 +38,7 @@ module.exports = function(name){
       return;
     }
 
-    // TODO: find better solution for this, non-capturing group in the RegExp didn't work
-    if(key === 'edition'){
+    if(key === 'edition' || key === 'release'){
       data[key] = data[key]
         .replace(/\./g, ' ')
         .trim();
