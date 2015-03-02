@@ -28,6 +28,7 @@ module.exports = function(name){
   data.title = name
     .replace(RegExp(matches + '-', 'g'), '')
     .replace(/\./g, ' ')
+    .replace(/\s{2,}/g, ' ')
     .trim();
   data.original = name;
 
