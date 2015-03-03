@@ -243,4 +243,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, void 0);
     assert.equal(result.release, 'READ NFO');
   });
+
+  it('should parse example with language, tags and edition', function() {
+    var result = sceneRelease('The.Hobbit.The.Desolation.of.Smaug.2013.EXTENDED.MULTi.COMPLETE.BLURAY-XORBiTANT');
+
+    assert.equal(result.title, 'The Hobbit The Desolation of Smaug');
+    assert.equal(result.original, 'The.Hobbit.The.Desolation.of.Smaug.2013.EXTENDED.MULTi.COMPLETE.BLURAY-XORBiTANT');
+    assert.equal(result.year, "2013");
+    assert.equal(result.group, 'XORBiTANT');
+
+    assert.equal(result.resolution, void 0);
+    assert.equal(result.type, 'BLURAY');
+
+    assert.equal(result.video, void 0);
+    assert.equal(result.audio, void 0);
+
+    assert.equal(result.language, 'MULTi');
+    assert.equal(result.tags[0], 'COMPLETE');
+    assert.equal(result.edition, 'EXTENDED');
+    assert.equal(result.release, void 0);
+  });
 });
