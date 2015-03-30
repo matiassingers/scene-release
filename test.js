@@ -263,4 +263,24 @@ describe('sceneRelease', function(){
     assert.equal(result.edition, 'EXTENDED');
     assert.equal(result.release, void 0);
   });
+
+  it('should parse example with real proper tags', function() {
+    var result = sceneRelease('The.Walking.Dead.S05E16.REAL.PROPER.720p.HDTV.x264-KILLERS');
+
+    assert.equal(result.title, 'The Walking Dead S05E16');
+    assert.equal(result.original, 'The.Walking.Dead.S05E16.REAL.PROPER.720p.HDTV.x264-KILLERS');
+    assert.equal(result.year, void 0);
+    assert.equal(result.group, 'KILLERS');
+
+    assert.equal(result.resolution, '720p');
+    assert.equal(result.type, 'HDTV');
+
+    assert.equal(result.video, 'x264');
+    assert.equal(result.audio, void 0);
+
+    assert.equal(result.language, void 0);
+    assert.equal(result.tags, null);
+    assert.equal(result.edition, void 0);
+    assert.equal(result.release, 'REAL PROPER');
+  });
 });

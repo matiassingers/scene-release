@@ -13,7 +13,7 @@ module.exports = function(name){
     language: match(name, /MULTiSUBS|MULTi|NORDiC|DANiSH|SWEDiSH|NORWEGiAN|GERMAN|iTALiAN|FRENCH|SPANiSH/i),
     edition: match(name, /UNRATED|DC|(Directors|EXTENDED)[\.\s](CUT|EDITION)|EXTENDED|3D|2D|\bNF\b/i),
     tags: name.match(/COMPLETE|LiMiTED|iNTERNAL/i),
-    release: match(name, /PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX/i),
+    release: match(name, /REAL[\.\s]PROPER|PROPER|REPACK|READNFO|READ[\.\s]NFO|DiRFiX|NFOFiX/i),
     group: match(name, /[A-Za-z0-9]+$/)
   };
 
