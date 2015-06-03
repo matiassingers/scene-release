@@ -30,6 +30,6 @@
     "string-match": "1.0.0"
   },
   "devDependencies": {
-    "mocha": "2.1.0"
+    "mocha": "2.2.5"
   }
 }
